@@ -2,7 +2,7 @@
 
 # Network Traffic Analysis
 
-![][image1]
+![tcpdump log](assets/images/tcpdump log)
 
 | Part 1: Provide a summary of the problem found in the DNS and ICMP  traffic log. |  |
 | :---- | ----- |
