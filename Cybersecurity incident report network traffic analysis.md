@@ -4,7 +4,7 @@
 
 ![assets/images/tcpdump log](https://github.com/OliRC07/IncidentReport-NetworkTrafficAnalysis/blob/main/tcpdump%20log)
 
-| Part 1: Provide a summary of the problem found in the DNS and ICMP  traffic log. |  |
+| Part 1: Summary of the issue found in the DNS and ICMP traffic log. |  |
 | :---- | ----- |
 | As part of the DNS protocol, the UDP protocol was used to retrieve the IP address for the domain name of yummyrecipesforme.com. The ICMP protocol was used to respond with an error message, indicating issues contacting the DNS server. The UDP message going from the browser to the DNS server is shown in the first two lines of every log event. The ICMP error response from the DNS server to the browser is displayed in the third and fourth lines of every log event with the error message “**udp** **port 53 unreachable”.** Port 53 is **associated with DNS protocol traffic,** so we know this is an issue with the DNS server. Another evidence of it is the plus sign after the query identification number 35084, which indicates flags with the UDP message. “A?” symbol indicates flags performing DNS protocol operations.  Because of the ICMP error response message about port 53, the flags associated with the outgoing UDP message and the domain name retrieval, **it looks like the DNS server is not responding**. |  |
 |  |  |
