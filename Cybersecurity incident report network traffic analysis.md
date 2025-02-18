@@ -2,7 +2,7 @@
 
 # Network Traffic Analysis
 
-![tcpdump log](assets/images/tcpdump log)
+![assets/images/tcpdump log](https://github.com/OliRC07/IncidentReport-NetworkTrafficAnalysis/blob/main/tcpdump%20log)
 
 | Part 1: Provide a summary of the problem found in the DNS and ICMP  traffic log. |  |
 | :---- | ----- |
