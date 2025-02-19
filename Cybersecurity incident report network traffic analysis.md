@@ -1,8 +1,14 @@
-# Cybersecurity Incident Report: 
+# Cybersecurity Incident Report: Network Traffic Analysis
 
-# Network Traffic Analysis
+# <b>Context<b>
+
+Several customers of clients reported that they were not able to access the client company website www.yummyrecipesforme.com, and saw the error “destination port unreachable” after waiting for the page to load. 
+
+The goal is to analyze the situation and determine which network protocol was affected during this incident. Starting by visiting the website, we receive the error “destination port unreachable.” To troubleshoot the issue, we load your network analyzer tool, tcpdump, and attempt to load the webpage again. To load the webpage, the browser sends a query to a DNS server via the UDP protocol to retrieve the IP address for the website's domain name; this is part of the DNS protocol. The browser then uses this IP address as the destination IP for sending an HTTPS request to the web server to display the webpage  The analyzer shows that when you send UDP packets to the DNS server, you receive ICMP packets containing the error message: “udp port 53 unreachable.” 
 
 ![assets/images/tcpdump log](https://github.com/OliRC07/IncidentReport-NetworkTrafficAnalysis/blob/main/tcpdump%20log)
+
+Now that the data packets are captured using the packer sniffer, we will try to identify which network protocol and service were impacted by this incident, and then, to write a follow-up report. 
 
 | Part 1: Summary of the issue found in the DNS and ICMP traffic log. |  |
 | :---- | ----- |
